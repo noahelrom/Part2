@@ -40,3 +40,4 @@ float Showroom::GetInventoryValue() {
         totalValue += _vehicles.at(i).GetPrice();
     }
     return totalValue;
+}
