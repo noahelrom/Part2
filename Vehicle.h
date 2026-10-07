@@ -3,20 +3,22 @@
 
 class Vehicle {
 
-    std::string _make;
-    std::string _model;
-    int _year;
-    float _price;
-    int _mileage;
+    private:
+
+        std::string _make;
+        std::string _model;
+        int _year;
+        float _price;
+        int _mileage;
 
     public:
 
-    Vehicle();
-    Vehicle(std::string make, std::string model, int year, int price, int mileage);
+        Vehicle();
+        Vehicle(std::string make, std::string model, int year, int price, int mileage);
 
-    void Display();
+        void Display();
 
-    std::string GetYearMakeModel();
+        std::string GetYearMakeModel();
 
-    float GetPrice();
+        float GetPrice();
 };
