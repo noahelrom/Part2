@@ -19,7 +19,7 @@ Vehicle::Vehicle(std::string make, std::string model, int year, int price, int m
 }
 
 void Vehicle::Display() {
-    std::cout << _year << " " << _make << " " << _model << " " << _price << " " << _mileage << std::endl;
+    std::cout << _year << " " << _make << " " << _model << " $" << _price << " " << _mileage << std::endl;
 }
 
 std::string Vehicle::GetYearMakeModel() {
