@@ -1,22 +1,23 @@
 #pragma once
-#include "Vehicle.h"
+
 #include <vector>
 
+#include "Vehicle.h"
+
 class Showroom {
+public:
 
-    private:
+    Showroom(std::string name = "Unnamed Showroom", std::size_t capacity = 0);
 
-        std::string _name;
-        std::vector<Vehicle> _vehicles;
-        std::size_t _MaxVehicles;
+    std::vector<Vehicle> GetVehicleList();
 
-    public:
+    void AddVehicle(Vehicle v);
+    void ShowInventory();
+    float GetInventoryValue();
 
-        Showroom(std::string name = "Unnamed Showroom", std::size_t capacity = 0);
+private:
 
-        std::vector<Vehicle> GetVehicleList();
-
-        void AddVehicle(Vehicle v);
-        void ShowInventory();
-        float GetInventoryValue();
+    std::string _ShowroomName;
+    std::vector<Vehicle> _vehicles;
+    std::size_t _MaxVehicles;
 };

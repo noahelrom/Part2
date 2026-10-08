@@ -1,5 +1,6 @@
-#include "Vehicle.h"
 #include <iostream>
+
+#include "Vehicle.h"
 
 Vehicle::Vehicle() {
     _make = "COP3504C";
@@ -18,10 +19,11 @@ Vehicle::Vehicle(std::string make, std::string model, int year, int price, int m
 }
 
 void Vehicle::Display() {
-    std::cout << _year << " " << _make << " " << _model << " $" << _price << " " << _mileage << std::endl;
+    std::cout << _year << " " << _make << " " << _model << " " << _price << " " << _mileage << std::endl;
 }
 
 std::string Vehicle::GetYearMakeModel() {
+    // YMM = Year, Make, then Model
     std::string stringYMM = std::to_string(_year) + " " + _make + " " + _model;
     return stringYMM;
 }

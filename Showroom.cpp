@@ -1,8 +1,9 @@
-#include "Showroom.h"
 #include <iostream>
 
+#include "Showroom.h"
+
 Showroom::Showroom(std::string name, std::size_t capacity) {
-    _name = name;
+    _ShowroomName = name;
     _MaxVehicles = capacity;
 }
 
@@ -20,16 +21,17 @@ void Showroom::AddVehicle(Vehicle v) {
 
 void Showroom::ShowInventory() {
     if (_vehicles.empty()) {
-        std::cout << _name << " is empty!" << std::endl;
+        std::cout << _ShowroomName << " is empty!" << std::endl;
         return;
     }
 
-    std::cout << "Vehicles in " << _name << std::endl;
+    std::cout << "Vehicles in " << _ShowroomName << std::endl;
     for (std::size_t i = 0; i < _vehicles.size(); ++i) {
         _vehicles.at(i).Display();
     }
 }
 
+// Calculates the total value of all vehicles in the showroom
 float Showroom::GetInventoryValue() {
     if (_vehicles.empty()) {
         return 0.0;

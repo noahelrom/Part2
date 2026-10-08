@@ -1,24 +1,24 @@
 #pragma once
+
 #include <string>
 
 class Vehicle {
+public:
 
-    private:
+    Vehicle();
+    Vehicle(std::string make, std::string model, int year, int price, int mileage);
 
-        std::string _make;
-        std::string _model;
-        int _year;
-        float _price;
-        int _mileage;
+    void Display();
 
-    public:
+    std::string GetYearMakeModel();
 
-        Vehicle();
-        Vehicle(std::string make, std::string model, int year, int price, int mileage);
+    float GetPrice();
 
-        void Display();
+private:
 
-        std::string GetYearMakeModel();
-
-        float GetPrice();
+    std::string _make;
+    std::string _model;
+    int _year;
+    float _price;
+    int _mileage;
 };
